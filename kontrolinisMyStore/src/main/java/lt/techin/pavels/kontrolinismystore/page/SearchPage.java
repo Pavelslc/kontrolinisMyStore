@@ -12,7 +12,6 @@ public class SearchPage extends BasePage{
         try {
             WebElement productTitle = driver.findElement(By.xpath("//a[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'),'" + productName.toLowerCase() + "')]"));
             actions.moveToElement(productTitle).perform();
-//            wait.until(ExpectedConditions.visibilityOf(productTitle));
             return productTitle.isDisplayed();
         } catch (Exception ignored) {
             return false;
