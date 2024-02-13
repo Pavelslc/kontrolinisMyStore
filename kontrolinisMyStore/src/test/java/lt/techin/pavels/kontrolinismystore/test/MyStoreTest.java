@@ -76,7 +76,4 @@ public class MyStoreTest extends BaseTest {
         double actualProductPriceWithDiscount = cartPage.getProductPriceWithDiscount();
         assertEquals(expectedProductPriceWithDiscount,actualProductPriceWithDiscount,0.01,"Expected price with discount to be "+expectedProductPriceWithDiscount);
     }
-
-
-
 }
