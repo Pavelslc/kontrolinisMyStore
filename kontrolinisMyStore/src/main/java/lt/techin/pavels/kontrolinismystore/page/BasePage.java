@@ -5,6 +5,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
@@ -14,5 +16,6 @@ public class BasePage {
         this.driver = driver;
         PageFactory.initElements(driver,this);
         actions = new Actions(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 }
